@@ -6,11 +6,8 @@ import pandas as pd
 
 
 def get_velo_data(location, year=2015):
-    BASE = "https://data.stadt-zuerich.ch/dataset/verkehrszaehlungen_werte_fussgaenger_velo/resource/"
-    URLS = {
-        2015: BASE + "5c994056-eda6-48c5-8e61-28e96bcd04a3/download/2015verkehrszaehlungenwertefussgaengervelo.csv",
-        2014: BASE + "bd2c9dd9-5b05-4303-a4c9-4a9f5b73e8f7/download/2014verkehrszaehlungenwertefussgaengervelo.csv",
-        }
+    BASE = "https://sandbox.zenodo.org/record/242457/"
+    URLS = {2015: BASE + "files/bikes-2015.csv?download=1.csv"}
 
     if year not in URLS:
         raise ValueError("Year has to be one of 2014, 2015 "
